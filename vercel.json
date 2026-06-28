@@ -8,7 +8,7 @@
     "backend": {
       "entrypoint": "backend/server.js",
       "routePrefix": "/_/backend",
-      "runtime": "nodejs20.x"
+      "runtime": "nodejs"
     }
   }
 }
