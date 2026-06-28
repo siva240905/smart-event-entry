@@ -8,6 +8,7 @@
     "backend": {
       "entrypoint": "backend/server.js",
       "routePrefix": "/_/backend",
+      "builder": "@vercel/node",
       "runtime": "@vercel/node"
     }
   }
