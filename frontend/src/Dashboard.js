@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import API from "./api";
 
 function Dashboard() {
-  const [participants, setParticipants] = useState([]);
   const [eventStats, setEventStats] = useState({});
   const [loading, setLoading] = useState(true);
   const [summary, setSummary] = useState({
@@ -13,13 +12,13 @@ function Dashboard() {
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchData = async () => {
     setLoading(true);
     try {
       const res = await API.get("/api/participants");
-      setParticipants(res.data);
       prepareStats(res.data);
     } catch (err) {
       console.error(err);
